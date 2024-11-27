@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container mx-auto">
+        <div class="hero grid md:grid-cols-2 mdmt-10 shadow-lg md:p-10 overflow-hidden">
+            <div class="ledger bg-slate-600 md:text-center text-white py-8 pl-2">
+                <h2 class="uppercase md:text-4xl pb-8 font-bold ">Income Expense Tracker</h2>
+                <h4 class="text-2xl font-medium ">Your Balance</h4>
+                <h1 id="balance" class="text-xl py-4"> ₹ 0.00</h1>
+                <div class="inc-exp-div flex md:justify-center gap-4 md:gap-8 md:m-8 ml-2 text-xl">
+                    <div class="inc p-5 rounded-lg border-green-500 border-4 max-w-[200px]">
+                        <h4>Income</h4>
+                        <p id="inc-amt">0.00</p>
+                    </div>
+                    <div class="exp p-5 rounded-lg border-red-500 border-4 max-w-[200px]">
+                        <h4>Expense</h4>
+                        <p id="exp-amt">0.00</p>
+                    </div>
+                </div>
+                <form action="#" id="form">
+                    <div class="m-8 max-w-[400px] mx-auto">
+                        <label class="block  my-4 text-2xl font-normal text-start" for="desc">Description</label>
+                        <input type="text" class="text-black w-[75%] md:w-full py-2 px-4 rounded-lg" name="desc" id="desc" placeholder="Enter Description" />
+                    </div>
+                    <div class="m-8 max-w-[400px] mx-auto">
+                        <label class="block  my-4 text-2xl font-normal text-start" for="amount">Amount</label>
+                        <input type="number" class="text-black w-[75%] md:w-full py-2 px-4 rounded-lg" name="amount" id="amount" placeholder="Enter amount" />
+                    </div>
+                    <div class="w-[400px] mx-auto">
+                        <label class="block my-4 text-2xl font-normal text-start" for="amount type">Amount Type</label>
+                        <select class="block  w-[75%] md:mx-auto text-black md:w-full py-2 px-4 rounded-lg" name="amount type" id="amount-type">
+                            <option value="">select</option>
+                            <option value="Income">Income</option>
+                            <option value="Expense">Expense</option>
+                        </select>
+                    </div>
+                    <button id="submit" class="mt-10 mb-4 bg-slate-300 text-black py-2 px-4 rounded-lg hover:bg-slate-400">Add Transaction</button>
+                </form>
+            </div>
+            <div class="transition bg-slate-300 md:text-center overflow-y-auto">
+                <h3 class="uppercase md:text-4xl pl-4 py-4 md:pl-0 mdpy-8 font-bold">Transaction Details</h3>
+                <ul class="relative" id="trans">
+                    
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script src="./scritp.js"></script>
+
+</html>
